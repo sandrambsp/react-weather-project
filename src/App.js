@@ -1,4 +1,5 @@
 import React from "react";
+import Weather from "./Weather";
 
 import "./App.css";
 
@@ -6,17 +7,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Weather App</h1>
-        <footer>
-          This project was coded by Sandra Pereira an it is{" "}
-          <a
-            href="https://github.com/sandrambsp/react-weather-project"
-            target="_blank"
-            rel="noreferrer"
-          >
-            open-sourced
-          </a>
-        </footer>
+        <Weather />
       </div>
     </div>
   );
