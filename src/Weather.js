@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Footer from "./Footer";
+import Today from "./Today";
 import axios from "axios";
 
 import "./Weather.css";
@@ -8,10 +9,9 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
-      date: "Monday 13:00",
+      date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
       wind: Math.round(response.data.wind.speed),
@@ -45,8 +45,7 @@ export default function Weather(props) {
               </div>
               <div>
                 <p>
-                  Last updated:{" "}
-                  <span className="today">{weatherData.date}</span>
+                  Last updated: <Today date={weatherData.date} />
                 </p>
               </div>
               <div className="container-currently">
