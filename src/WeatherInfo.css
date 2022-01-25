@@ -1,0 +1,32 @@
+.WeatherInfo .description {
+  text-transform: capitalize;
+  font-size: 16px;
+}
+.WeatherInfo .current-city {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.WeatherInfo .temperature {
+  font-weight: 700;
+}
+.WeatherInfo .units {
+  position: relative;
+  top: -10px;
+  font-size: 12px;
+}
+
+.WeatherInfo ul {
+  padding: 0;
+  margin: 0;
+}
+.WeatherInfo li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.WeatherInfo .wind,
+.WeatherInfo .humid {
+  display: inline;
+}

@@ -1,4 +1,7 @@
 import React from "react";
+import WeatherIcon from "./WeatherIcon";
+
+import "./WeatherInfo.css";
 
 export default function WeatherInfo(props) {
   return (
@@ -24,17 +27,16 @@ export default function WeatherInfo(props) {
             </ul>
           </div>
           <div className="col-sm-4">
-            <img
-              className="current-icon"
-              src="./images/{props.data.icon}{props.data.id}.svg"
-              width="120px"
-              alt=""
-            />
+            <WeatherIcon code={props.data.icon} alt={props.data.description} />
           </div>
           <div className="col-sm-4">
             <ul className="col-right">
               <li className="wind">
-                <img src="./images/wind.svg" width="25px" alt="" />
+                <img
+                  src="https://basmilius.github.io/weather-icons/production/fill/all/wind.svg"
+                  width="40px"
+                  alt="wind icon"
+                />
               </li>
               <li className="wind">
                 <span className="wind-speed">{props.data.wind}</span> km/h
@@ -42,7 +44,11 @@ export default function WeatherInfo(props) {
             </ul>
             <ul className="col-right">
               <li className="humid">
-                <img src="./images/raindrop.svg" width="25px" alt="" />
+                <img
+                  src="https://basmilius.github.io/weather-icons/production/fill/all/raindrop.svg"
+                  width="40px"
+                  alt="humidity icon"
+                />
               </li>
               <li className="humid">
                 <span className="humidity">{props.data.humidity}</span>%
