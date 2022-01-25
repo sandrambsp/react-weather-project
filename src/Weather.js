@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Footer from "./Footer";
 import Today from "./Today";
 import WeatherInfo from "./WeatherInfo";
+import ReactLoading from "react-loading";
 import axios from "axios";
 
 import "./Weather.css";
@@ -76,6 +77,13 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading...";
+    return (
+      <ReactLoading
+        type="spinningBubbles"
+        color="black"
+        height="50px"
+        width="50px"
+      />
+    );
   }
 }
