@@ -1,0 +1,26 @@
+.WeatherForecast .days {
+  margin: 25px 0;
+  padding: 10px 5px;
+}
+
+.WeatherForecast .days:hover {
+  background-color: #c9f7dab2;
+  border-radius: 15px;
+}
+
+.WeatherForecast .min-temp {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.WeatherForecast .max-temp {
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+}
+.WeatherForecast .forecast-temp {
+  margin: 0;
+  padding: 0;
+}
+.WeatherForecast .forecast-icon {
+  margin: 0;
+  padding: 0;
+}

@@ -12,24 +12,3 @@
 .Weather .container-search {
   margin-bottom: 20px;
 }
-
-.Weather .days {
-  margin: 25px 0;
-  padding: 0;
-}
-.Weather .min-temp {
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.5);
-}
-.Weather .max-temp {
-  font-size: 12px;
-  color: rgb(0, 0, 0);
-}
-.Weather .forecast-temp {
-  margin: 0;
-  padding: 0;
-}
-.Weather .forecast-icon {
-  margin: 0;
-  padding: 0;
-}
