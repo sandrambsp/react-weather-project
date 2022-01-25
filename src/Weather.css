@@ -1,72 +1,69 @@
-.card {
+.Weather .card {
   max-width: 700px;
   margin: 50px auto;
   background: linear-gradient(to top, #ace0f9 0%, #caf8da 100%);
   font-family: "Source Sans 3", sans-serif;
   text-align: center;
 }
-p {
+.Weather p {
   font-size: 13px;
   margin-bottom: 0;
 }
-.container-search {
+.Weather .container-search {
   margin-bottom: 20px;
 }
-.description {
+.Weather .description {
   text-transform: capitalize;
 }
-.current-city {
+.Weather .current-city {
   font-weight: 700;
   margin-bottom: 0;
 }
-.temperature {
+.Weather .temperature {
   font-weight: 700;
 }
-.units {
+.Weather .units {
   position: relative;
   top: -10px;
   font-size: 12px;
 }
 
-ul {
+.Weather ul {
   padding: 0;
   margin: 0;
 }
-li {
+.Weather li {
   list-style: none;
   margin: 0;
   padding: 0;
   font-size: 14px;
 }
 
-.right-icons {
+.Weather .right-icons {
   font-size: 14px;
 }
-.wind,
+.Weather .wind,
 .humid {
   display: inline;
 }
 
-.days {
+.Weather .days {
   margin: 25px 0;
   padding: 0;
 }
-.min-temp {
+.Weather .min-temp {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.5);
 }
-.max-temp {
+.Weather .max-temp {
   font-size: 12px;
   color: rgb(0, 0, 0);
 }
-.forecast-temp {
+.Weather .forecast-temp {
   margin: 0;
   padding: 0;
 }
-.forecast-icon {
+.Weather .forecast-icon {
   margin: 0;
   padding: 0;
-}
-.signature {
-  font-size: 11px;
 }
