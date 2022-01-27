@@ -1,6 +1,5 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
-import WeatherTemperature from "./WeatherTemperature";
 
 import "./WeatherInfo.css";
 
@@ -20,7 +19,10 @@ export default function WeatherInfo(props) {
                 </p>
               </li>
               <li>
-                <WeatherTemperature celsius={props.data.temperature} />
+                <h3 className="WeatherTemperature">
+                  <span className="temperature">{props.data.temperature}</span>
+                  <span className="units">ºC</span>
+                </h3>
               </li>
             </ul>
           </div>
