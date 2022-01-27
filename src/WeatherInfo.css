@@ -35,3 +35,12 @@
 .WeatherInfo .humid {
   display: inline;
 }
+
+@media (max-width: 600px) {
+  .WeatherInfo {
+    margin-top: 20px;
+  }
+  .daylightTime {
+    margin-top: 15px;
+  }
+}
