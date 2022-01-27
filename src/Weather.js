@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Footer from "./Footer";
 import Today from "./Today";
 import WeatherInfo from "./WeatherInfo";
-import ReactLoading from "react-loading";
+import { TailSpin } from "react-loader-spinner";
 import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 
@@ -100,12 +100,7 @@ export default function Weather(props) {
   } else {
     search();
     return (
-      <ReactLoading
-        type="spinningBubbles"
-        color="black"
-        height="50px"
-        width="50px"
-      />
+      <TailSpin heigth="100" width="100" color="grey" ariaLabel="loading" />
     );
   }
 }

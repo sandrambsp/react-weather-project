@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ReactLoading from "react-loading";
+import { TailSpin } from "react-loader-spinner";
 import WeatherForecastDay from "./WeatherForecastDay";
 import axios from "axios";
 
@@ -45,12 +45,7 @@ export default function WeatherForecast(props) {
     axios.get(apiUrl).then(handleResponse);
 
     return (
-      <ReactLoading
-        type="spinningBubbles"
-        color="black"
-        height="50px"
-        width="50px"
-      />
+      <TailSpin heigth="100" width="100" color="grey" ariaLabel="loading" />
     );
   }
 }
