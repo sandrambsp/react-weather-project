@@ -1,9 +1,26 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
+import ReactCountryFlag from "react-country-flag";
 
 import "./WeatherInfo.css";
 
 export default function WeatherInfo(props) {
+  let hoursSunrise = props.data.sunrise.getHours();
+  if (hoursSunrise < 10) {
+    hoursSunrise = `0${hoursSunrise}`;
+  }
+  let minutesSunrise = props.data.sunrise.getMinutes();
+  if (minutesSunrise < 10) {
+    minutesSunrise = `0${minutesSunrise}`;
+  }
+  let hoursSunset = props.data.sunset.getHours();
+  if (hoursSunset < 10) {
+    hoursSunset = `0${hoursSunset}`;
+  }
+  let minutesSunset = props.data.sunset.getMinutes();
+  if (minutesSunset < 10) {
+    minutesSunset = `0${minutesSunset}`;
+  }
   return (
     <div className="WeatherInfo">
       <div className="container-currently">
@@ -11,7 +28,18 @@ export default function WeatherInfo(props) {
           <div className="col-sm-4">
             <ul>
               <li className="city">
-                <h2 className="current-city">{props.data.city}</h2>
+                <h2 className="current-city">
+                  {props.data.city}{" "}
+                  <ReactCountryFlag
+                    countryCode={props.data.country}
+                    svg
+                    style={{
+                      width: "35px",
+                      height: "35px",
+                    }}
+                    className="ms-1"
+                  />
+                </h2>
               </li>
               <li>
                 <p>
@@ -58,6 +86,30 @@ export default function WeatherInfo(props) {
                 <span className="humidity">{props.data.humidity}</span>%
               </li>
             </ul>
+          </div>
+        </div>
+        <div className="row align-items-center">
+          <div className="d-flex justify-content-center daylightTime">
+            <div className="sunrise">
+              <img
+                src="https://basmilius.github.io/weather-icons/production/fill/all/sunrise.svg"
+                width="40px"
+                alt="sunrise icon"
+              />
+              <div>
+                {hoursSunrise}:{minutesSunrise}
+              </div>
+            </div>
+            <div className="sunset">
+              <img
+                src="https://basmilius.github.io/weather-icons/production/fill/all/sunset.svg"
+                width="40px"
+                alt="sunset icon"
+              />
+              <div>
+                {hoursSunset}:{minutesSunset}
+              </div>
+            </div>
           </div>
         </div>
       </div>

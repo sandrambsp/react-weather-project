@@ -24,6 +24,12 @@
   padding: 0;
   font-size: 16px;
 }
+.WeatherInfo .sunrise,
+.WeatherInfo .sunset {
+  font-size: 14px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
 .WeatherInfo .wind,
 .WeatherInfo .humid {

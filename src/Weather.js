@@ -22,8 +22,25 @@ export default function Weather(props) {
       wind: Math.round(response.data.wind.speed),
       humidity: response.data.main.humidity,
       city: response.data.name,
+      country: response.data.sys.country,
       icon: response.data.weather[0].icon,
+      sunrise: new Date(response.data.sys.sunrise * 1000),
+      sunset: new Date(response.data.sys.sunset * 1000),
     });
+  }
+
+  function showPosition(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    const apiKey = "fc98cc0850552ccf4d2c0fb4439fee04";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function getCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(showPosition);
   }
 
   function search() {
@@ -49,11 +66,10 @@ export default function Weather(props) {
             <div className="card-body">
               <div className="container-search">
                 <form className="city-form" onSubmit={handleSubmit}>
-                  <input
-                    type="button"
-                    className="current-location"
-                    value="📍"
-                  />
+                  <i
+                    className="fas fa-map-marker-alt location"
+                    onClick={getCurrentLocation}
+                  ></i>
                   <input
                     type="search"
                     className="city-input"
@@ -61,7 +77,11 @@ export default function Weather(props) {
                     autoFocus="on"
                     onChange={updateCity}
                   />
-                  <input type="submit" value="Search" />
+                  <input
+                    className="buttonSearch"
+                    type="submit"
+                    value="Search"
+                  />
                 </form>
               </div>
               <div>

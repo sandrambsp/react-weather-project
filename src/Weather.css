@@ -12,3 +12,23 @@
 .Weather .container-search {
   margin-bottom: 20px;
 }
+.Weather .city-input {
+  border-radius: 5px;
+}
+.Weather .buttonSearch {
+  background-color: #ace0f800;
+  border: 2px solid #ace0f800;
+  border-radius: 5px;
+  padding: 1px 15px;
+}
+.Weather .buttonSearch:hover {
+  background-color: #ace0f8;
+}
+.Weather .location {
+  padding: 6px 15px 8px 15px;
+  border-radius: 5px;
+}
+.Weather .location:hover {
+  background-color: #ace0f8;
+  cursor: pointer;
+}
