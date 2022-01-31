@@ -26,6 +26,13 @@ export default function WeatherInfo(props) {
       <div className="container-currently">
         <div className="row align-items-center">
           <div className="col-sm-4">
+            <WeatherIcon
+              code={props.data.icon}
+              alt={props.data.description}
+              width="150px"
+            />
+          </div>
+          <div className="col-sm-4">
             <ul>
               <li className="city">
                 <h2 className="current-city">
@@ -53,13 +60,6 @@ export default function WeatherInfo(props) {
                 </h3>
               </li>
             </ul>
-          </div>
-          <div className="col-sm-4">
-            <WeatherIcon
-              code={props.data.icon}
-              alt={props.data.description}
-              width="150px"
-            />
           </div>
           <div className="col-sm-4">
             <ul className="col-right">
