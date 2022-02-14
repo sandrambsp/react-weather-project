@@ -12,7 +12,10 @@ export default function Footer() {
       >
         Open-source code
       </a>{" "}
-      by Sandra Pereira
+      by{" "}
+      <a href="https://www.sandrapereira.me/" target="_blank" rel="noreferrer">
+        Sandra Pereira
+      </a>
     </div>
   );
 }
