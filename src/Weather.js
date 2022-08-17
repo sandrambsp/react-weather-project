@@ -66,10 +66,12 @@ export default function Weather(props) {
             <div className="card-body">
               <div className="container-search">
                 <form className="city-form" onSubmit={handleSubmit}>
-                  <i
-                    className="fas fa-map-marker-alt location"
+                  <input
+                    className="buttonSearch"
+                    type="submit"
+                    value="✔️"
                     onClick={getCurrentLocation}
-                  ></i>
+                  ></input>
                   <input
                     type="search"
                     className="city-input"
@@ -77,11 +79,7 @@ export default function Weather(props) {
                     autoFocus="on"
                     onChange={updateCity}
                   />
-                  <input
-                    className="buttonSearch"
-                    type="submit"
-                    value="Search"
-                  />
+                  <input className="buttonSearch" type="submit" value="🔍" />
                 </form>
               </div>
               <div>
