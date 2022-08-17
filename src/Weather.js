@@ -66,10 +66,7 @@ export default function Weather(props) {
             <div className="card-body">
               <div className="container-search">
                 <form className="city-form" onSubmit={handleSubmit}>
-                  <i
-                    className="fas fa-map-marker-alt location"
-                    onClick={getCurrentLocation}
-                  ></i>
+                  <i className="bi bi-geo" onClick={getCurrentLocation}></i>
                   <input
                     type="search"
                     className="city-input"
