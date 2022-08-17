@@ -67,7 +67,7 @@ export default function Weather(props) {
               <div className="container-search">
                 <form className="city-form" onSubmit={handleSubmit}>
                   <input
-                    className="buttonSearch"
+                    className="location"
                     type="submit"
                     value="✔️"
                     onClick={getCurrentLocation}
